@@ -32,7 +32,7 @@ tools {
 stage('deploy')
 {
 steps{
-echo "this is amazon pipeline"
+echo "this is amazon pipeline...."
 
 }
  }
