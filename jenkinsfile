@@ -3,14 +3,8 @@ agent any
 tools {
   maven 'm1'
 }
- stages {
-  stage('clone') {
-    steps {
-   checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'ssh key', url: 'https://github.com/Nagaveni-29/Amazon-1.git']])
-    }
-  }
 
-  stage('build') {
+ stage('build') {
     steps {
         sh 'mvn clean install' 
     }
@@ -35,6 +29,10 @@ tools {
         
     }
   }
+stage('deploy')
+{
+steps{
+echo "this is amazon pipeline"
 
 }
  }
